@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil - KULIAH PAKAR</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body {
+        font-family: "Open Sans", sans-serif;
+        background-image: url("it.png"); /* URL gambar latar belakang */
+        background-size: cover; /* Agar gambar latar belakang menyesuaikan ukuran layar */
+        background-position: center; /* Menempatkan gambar di tengah layar */
+        background-attachment: fixed; /* Membuat gambar tetap saat scroll */
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.8
+        ); /* Memberikan latar belakang transparan untuk kontainer */
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        margin: 100px auto;
+        text-align: center;
+      }
+
+      h1 {
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      .profile-photo {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        object-fit: cover;
+      }
+
+      .profile-info {
+        color: #666;
+        font-size: 1.1em;
+        text-align: left;
+      }
+
+      .profile-info p {
+        margin: 5px 0;
+      }
+
+      /* Menu Styling */
+      .w3-bar {
+        display: flex;
+        justify-content: space-around;
+        background-color: #2196f3; /* Warna latar navbar biru */
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 999;
+        padding: 10px 0;
+      }
+
+      .w3-bar-item {
+        color: white;
+        padding: 10px 15px;
+        font-size: 14px; /* Ukuran font kecil di desktop */
+        text-align: center;
+        text-decoration: none;
+      }
+
+      .w3-bar-item:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      .menu-toggle {
+        display: none;
+        font-size: 2em;
+        padding: 10px;
+        color: white;
+        background-color: #2196f3; /* Warna latar tombol menu biru */
+        cursor: pointer;
+      }
+
+      /* Media query untuk tampilan ponsel */
+      @media (max-width: 768px) {
+        .w3-bar {
+          display: none; /* Sembunyikan menu */
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .menu-toggle {
+          display: block; /* Menampilkan tombol menu di ponsel */
+        }
+
+        .w3-bar-item {
+          font-size: 16px; /* Ukuran font lebih besar di ponsel */
+          padding: 12px 20px;
+          width: 100%; /* Agar item menu penuh lebar */
+          text-align: left;
+        }
+
+        .w3-bar.active {
+          display: flex; /* Menampilkan menu saat aktif */
+        }
+
+        .menu-toggle.active + .w3-bar {
+          display: flex;
+        }
+      }
+    </style>
+  </head>
+  <body class="w3-theme-l5">
+    <!-- Navbar -->
+    <div class="w3-top">
+      <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+        <span class="menu-toggle" onclick="toggleMenu()">&#9776; Menu</span>
+        <div class="w3-bar">
+          <a
+            href="dashboard.html"
+            class="w3-bar-item w3-button w3-padding-large w3-theme-d4"
+          >
+            <i class="fa fa-home w3-margin-right"></i>HOME
+          </a>
+          <a
+            href="Lokasi.html"
+            class="w3-bar-item w3-button w3-padding-large w3-hover-white"
+            title="Lokasi"
+          >
+            <i class="fa fa-globe"></i> Lokasi
+          </a>
+          <a
+            href="Profil.html"
+            class="w3-bar-item w3-button w3-padding-large w3-hover-white"
+            title="Profil"
+          >
+            <i class="fa fa-user"></i> Profil
+          </a>
+          <a
+            href="Pesan.html"
+            class="w3-bar-item w3-button w3-padding-large w3-hover-white"
+            title="Pesan"
+          >
+            <i class="fa fa-envelope"></i> Pesan
+          </a>
+          <a
+            href="logout.html"
+            class="w3-bar-item w3-button w3-padding-large w3-hover-white"
+            title="Logout"
+          >
+            <i class="fa fa-sign-out"></i> Logout
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="container">
+        <h1>Profil Pengguna</h1>
+        <img src="R.png" alt="Foto Profil" class="profile-photo" />
+        <div class="profile-info">
+          <p><strong>Nama:</strong> Stikes Bakti Nusantara Gorontalo</p>
+          <p><strong>Email:</strong> stikesbaktara@gmail.com</p>
+          <p><strong>No. Telepon:</strong> 081234567890</p>
+          <p><strong>Alamat:</strong> Jalan Contoh, Kota Contoh, Indonesia</p>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      function toggleMenu() {
+        document.querySelector(".menu-toggle").classList.toggle("active");
+        document.querySelector(".w3-bar").classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
